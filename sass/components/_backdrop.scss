@@ -1,0 +1,18 @@
+.backdrop {
+  @include size(100%, 100%);
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: $overlay-color;
+  opacity: 1;
+  transition-property: opacity visibility;
+  @include main-animation();
+  &.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.7);
+  }
+  &.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+}

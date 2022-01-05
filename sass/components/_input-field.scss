@@ -1,0 +1,38 @@
+.input-field {
+  margin-bottom: 10px;
+}
+
+.input-field__group-absolute {
+  position: relative;
+}
+
+.input-field__input {
+  width: 100%;
+  padding: 12px 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  outline: none;
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition-property: border;
+  @include main-animation();
+  &:focus-within + .input-field__icon {
+    fill: $accent-color;
+  }
+  &:focus {
+    border: 1px solid $accent-color;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.input-field__icon {
+  display: inline-block;
+  position: absolute;
+  @include size(18px, 18px);
+  left: 12px;
+  bottom: 12px;
+  fill: $primary-shade-color;
+  transition-property: fill;
+  @include main-animation();
+}

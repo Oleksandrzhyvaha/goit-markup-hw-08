@@ -1,0 +1,26 @@
+.clients-list {
+  display: flex;
+}
+
+.clients-list__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-list__link {
+  @extend %flex-center;
+  @include size(170px, 92px);
+  border: 1px solid $secondary-accent-color;
+  border-radius: 4px;
+  color: $secondary-accent-color;
+  transition-property: color, border;
+  @include main-animation();
+  &:hover,
+  &:focus {
+    border: 1px solid $accent-color;
+    color: $accent-color;
+  }
+}
+
+.clients-list__icon {
+  fill: currentColor;
+}

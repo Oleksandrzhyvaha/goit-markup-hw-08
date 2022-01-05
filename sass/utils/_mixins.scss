@@ -1,0 +1,9 @@
+@mixin main-animation() {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+
+@mixin size($width, $height) {
+  height: $height;
+  width: $width;
+}

@@ -1,0 +1,41 @@
+.navigation__list {
+  display: flex;
+}
+
+.navigation {
+  margin-left: 93px;
+}
+
+.navigation__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.navigation__link {
+  display: block;
+  padding: 32px 0;
+  line-height: 1.1;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: $primary-shade-color;
+  transition-property: color;
+  @include main-animation();
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.navigation__link--current {
+  position: relative;
+  color: $accent-color;
+  &::after {
+    content: "";
+    position: absolute;
+    @include size(100%, 4px);
+    left: 0;
+    bottom: -1px;
+    background-color: $accent-color;
+    border-radius: 2px;
+  }
+}
