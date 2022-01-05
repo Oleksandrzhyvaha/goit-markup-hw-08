@@ -1,9 +1,22 @@
 @mixin main-animation() {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @mixin size($width, $height) {
-  height: $height;
   width: $width;
+  height: $height;
+}
+
+@mixin bg-img($url, $withGrad: true) {
+  @if $withGrad {
+    background-image: linear-gradient(
+        to right,
+        rgba($secondary-background-color, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url($url);
+  } @else {
+    background-image: url($url);
+  }
 }

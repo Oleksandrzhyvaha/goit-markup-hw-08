@@ -1,5 +1,7 @@
 .clients-list {
   display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
 }
 
 .clients-list__item:not(:last-child) {
@@ -23,4 +25,15 @@
 
 .clients-list__icon {
   fill: currentColor;
+}
+
+.clients-list__item {
+  margin: 15px;
+  flex-basis: calc((100% - 60px) / 2);
+  @media screen and (min-width: 767px) {
+    flex-basis: calc((100% - 90px) / 3);
+  }
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc((100% - 180px) / 6);
+  }
 }

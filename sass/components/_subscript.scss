@@ -1,5 +1,12 @@
 .subscribe-form {
   display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 760px) {
+    align-items: center;
+  }
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+  }
 }
 
 .subscribe-form__input {
@@ -18,5 +25,13 @@
   @include main-animation();
   &:focus {
     border: 1px solid $accent-color;
+  }
+  @media screen and (min-width: 760px) {
+    width: 450px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 358px;
+    margin-bottom: 0;
+    margin-right: 12px;
   }
 }

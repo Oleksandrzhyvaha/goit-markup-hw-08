@@ -10,7 +10,15 @@
   border-radius: 4px;
   transition-property: transform;
   @include main-animation();
-  padding: 40px;
+  padding: 40px 40px;
+
+  @media screen and (max-width: 360px) {
+    padding: 40px 20px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 528px;
+  }
 }
 
 .modal__title {

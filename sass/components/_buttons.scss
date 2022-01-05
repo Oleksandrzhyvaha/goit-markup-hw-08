@@ -30,10 +30,9 @@
 
 .close-button__icon {
   position: absolute;
-  top: 5px;
-  right: 5px;
-  width: 18px;
-  height: 18px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .secondary-button {
@@ -73,4 +72,31 @@
   &:hover {
     fill: currentColor;
   }
+}
+
+.sandwich {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include size(40px, 40px);
+  margin-left: auto;
+  background-color: transparent;
+  color: $accent-color;
+  cursor: pointer;
+  &:hover {
+    fill: currentColor;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .sandwich {
+    display: none;
+  }
+}
+
+.close-button-sandwich {
+  border: 0px;
+  @include size(40px, 40px);
+  right: 15px;
+  top: 10px;
 }
