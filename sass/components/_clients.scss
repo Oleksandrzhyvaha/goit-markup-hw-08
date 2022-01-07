@@ -3,14 +3,15 @@
   flex-wrap: wrap;
   margin: -15px;
 }
-
-.clients-list__item:not(:last-child) {
-  margin-right: 30px;
+.clients-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
 }
 
 .clients-list__link {
   @extend %flex-center;
-  @include size(170px, 92px);
+  @include size(100%, 92px);
   border: 1px solid $secondary-accent-color;
   border-radius: 4px;
   color: $secondary-accent-color;

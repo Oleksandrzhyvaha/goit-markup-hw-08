@@ -2,6 +2,24 @@
   margin-bottom: 30px;
 }
 
+.checkbox-field__text {
+  @extend %flex-center;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: $first-text-color;
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+  }
+}
+
+.checkbox-field__agreement {
+  margin-left: 5px;
+  text-decoration-line: underline;
+  text-decoration-skip-ink: none;
+  color: $accent-color;
+}
+
 .checkbox-field__input {
   position: absolute;
   appearance: none;
@@ -12,7 +30,7 @@
   }
   &:checked:focus + .checkbox-field__icon {
     background-color: $accent-color;
-    background-image: url(../images/done.svg);
+    background-image: url(/images/done.svg);
     background-size: contain;
     background-origin: border-box;
     background-position: center;
@@ -21,26 +39,12 @@
 
 .checkbox-field__icon {
   display: block;
-  @include size(16px, 16px);
+  min-width: 16px;
+  height: 16px;
   margin-right: 8px;
-  border: 2px solid $accent-color;
-  cursor: pointer;
+  border: 2px solid $primary-shade-color;
   border-radius: 2px;
+  cursor: pointer;
   transition-property: border, background-color, background-image;
   @include main-animation();
-}
-
-.checkbox-field__text {
-  @extend %flex-center;
-  font-size: 14px;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
-  color: $first-text-color;
-}
-
-.checkbox-field__agreement {
-  margin-left: 5px;
-  text-decoration-line: underline;
-  text-decoration-skip-ink: none;
-  color: $accent-color;
 }

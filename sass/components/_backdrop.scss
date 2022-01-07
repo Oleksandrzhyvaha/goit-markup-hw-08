@@ -1,18 +1,18 @@
 .backdrop {
-  @include size(100%, 100%);
+  position: fixed;
   top: 0;
   left: 0;
-  position: fixed;
-  background-color: $overlay-color;
+  @include size(100%, 100%);
+  background-color: rgba($overlay-color, 0.2);
   opacity: 1;
   transition-property: opacity visibility;
   @include main-animation();
-  &.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(0.7);
-  }
   &.is-hidden {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
+  }
+  &.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.7);
   }
 }

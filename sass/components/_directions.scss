@@ -1,22 +1,4 @@
-.direction {
-  @media screen and (max-width: 1199px) {
-    display: none;
-  }
-}
-
-.direction-list {
-  display: flex;
-}
-
-.direction-list__thumb {
-  position: relative;
-}
-
-.direction-list__item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.direction-list__explain-text {
+.directions-list__explain-text {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -26,10 +8,29 @@
   color: $secondary-color;
 }
 
-.direction-list__explain {
+.directions {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.directions-list {
+  display: flex;
+  margin: -15px;
+}
+
+.directions-list__thumb {
+  position: relative;
+}
+
+.directions-list__item {
+  margin: 15px;
+}
+
+.directions-list__explain {
   position: absolute;
   bottom: 0;
-  background-color: rgba(47, 48, 58, 0.8);
+  background-color: rgba($secondary-background-color, 0.8);
   width: 100%;
   padding: 27px 0;
 }

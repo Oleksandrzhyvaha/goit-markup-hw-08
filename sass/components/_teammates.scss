@@ -1,9 +1,33 @@
-.teammates {
+.teammate {
   background-color: $primary-background-color;
 }
 
-.teammates-list__item {
-  background: $secondary-page-color;
+.team-list {
+  @media screen and (min-width: 767px) {
+    margin: -15px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.team-list__member {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+}
+
+.team-list__position {
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  color: $first-text-color;
+  margin-bottom: 16px;
+}
+
+.team-list__item {
+  background: $secondary-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -16,27 +40,6 @@
   }
 }
 
-.teammates-list__description {
-  text-align: center;
-  padding: 30px 32px;
-}
-
-.teammates-list {
-  @media screen and (min-width: 767px) {
-    margin: -15px;
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-
-.teammates-list__member {
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 0.03em;
-  line-height: 1.2;
-  margin-bottom: 10px;
-}
-
 .team-list__item:not(:last-child) {
   margin-bottom: 30px;
   @media screen and (min-width: 767px) {
@@ -44,10 +47,7 @@
   }
 }
 
-.teammates-list__position {
-  font-size: 16px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-  color: $first-text-color;
-  margin-bottom: 16px;
+.team-list__description {
+  text-align: center;
+  padding: 30px 0;
 }

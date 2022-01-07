@@ -1,4 +1,4 @@
-.page-header__content {
+.header__content {
   width: inherit;
   display: flex;
   align-items: center;
@@ -9,16 +9,16 @@
   }
 }
 
-.page-header {
-  border-bottom: 1px solid $secondary-border-color;
+.header {
+  border-bottom: 1px solid $line-color;
   padding: 10px 0;
   @media screen and (min-width: 767px) {
     padding: 0;
   }
 }
 
-.header__container {
-  position: relative;
+.header__conteiner {
   display: flex;
   align-items: center;
+  position: relative;
 }
