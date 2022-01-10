@@ -1,4 +1,4 @@
-.navigation {
+.header__navigation {
   @media screen and (min-width: $tablet) {
     margin-left: 88px;
     margin-bottom: 0;
@@ -23,6 +23,7 @@
     color: $accent-color;
   }
   @media screen and (max-width: 767px) {
+    display: inline;
     font-size: 40px;
     line-height: 1.18;
     letter-spacing: 0.02em;
