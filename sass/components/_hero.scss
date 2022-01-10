@@ -12,6 +12,13 @@
   margin-bottom: 30px;
 }
 
+@media screen and (min-width: $desktop) {
+  .hero__title {
+    font-size: 44px;
+    max-width: 700px;
+  }
+}
+
 .hero {
   padding: 118px 0;
   margin: 0 auto;

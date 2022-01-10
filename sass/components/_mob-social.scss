@@ -1,7 +1,7 @@
 .social-text-links {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -10px;
+  margin: 0 10px;
 }
 
 .social-text-links__link {
@@ -13,13 +13,13 @@
 }
 
 .social-text-links__item {
-  padding: 0px;
+  padding: 0 10px;
 }
 
 .social-text-links__item:not(:last-child) {
   border-right: 1px solid rgba($primary-shade-color, 0.2);
   @media screen and (max-width: 479px) {
-    border-right: 0;
     margin-bottom: 10px;
+    border-right: 0;
   }
 }
